@@ -3,7 +3,7 @@
 A lightweight, web-based **Admin Panel honeypot** designed for **cybersecurity learning, experimentation, and research**.  
 Ideal for students, ethical hackers, and developers who want hands-on experience with authentication flows, access control, and simulated secure interfaces.
 
----
+
 
 ## 🚀 Purpose
 
@@ -15,7 +15,7 @@ Ideal for students, ethical hackers, and developers who want hands-on experience
 - Visualize system status and simulated settings  
 - Learn core concepts behind honeypots and defensive deception  
 
----
+
 
 ## 🧠 Features
 This project is designed to help you learn and experiment with:
@@ -31,7 +31,6 @@ This project is designed to help you learn and experiment with:
 - 🧪 Predefined users for safe testing  
 - 🧲 Built as an educational honeypot concept  
 
----
 
 ## 🧰 Prerequisites
 
@@ -86,7 +85,7 @@ Visit:
 http://127.0.0.1:8080 (localhost)
 http://<your-lan-ip>:8080 (on your LAN)
 
----
+
 
 ## 🧪 Default Users
 | Username |	Password |	Role |
@@ -95,18 +94,18 @@ http://<your-lan-ip>:8080 (on your LAN)
 
 You can customize users in the config.py or similar config file.
 
----
+
 
 ## ⚠️ Disclaimer
 This project is intended for educational and research purposes only.
 It is not secure for production use without significant hardening and proper authentication/security reviews.
 
----
+
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+
 
 ## 🙌 Credits
 Created with ❤️ by CyberNilsen
