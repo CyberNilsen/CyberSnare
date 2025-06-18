@@ -18,6 +18,7 @@ Ideal for students, ethical hackers, and developers who want hands-on experience
 ---
 
 ## 🧠 Features
+This project is designed to help you learn and experiment with:
 
 - 🔐 Login system with session-based access control  
 - 🧑‍💼 Admin dashboard with:
@@ -93,21 +94,6 @@ http://<your-lan-ip>:8080 (on your LAN)
 | admin |	letmein123 |	Administrator |
 
 You can customize users in the config.py or similar config file.
-
-- 🧠 Learning Focus
-This project is designed to help you learn and experiment with:
-
-- 🔐 Secure session handling using Flask
-
-- 🔑 Admin/guest role-based permissions
-
-- 🧱 Simulated firewall configuration interface
-
-- 📬 Email alerting with SendGrid
-
-- 🧰 Clean Bootstrap 5 UI and Jinja2 templating
-
-- 🪤 Honeypot design and deception principles
 
 ---
 
