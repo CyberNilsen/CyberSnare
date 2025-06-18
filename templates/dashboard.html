@@ -1,3 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
 <h1>Welcome to Admin Dashboard</h1>
-<p>System status: OK</p>
-<a href="/settings">Go to Settings</a> | <a href="/logout">Logout</a>
+<p>System status: <span class="badge bg-success">OK</span></p>
+<p>Last login: 2025-06-15 14:26</p>
+{% endblock %}

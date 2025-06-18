@@ -1,3 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Settings{% endblock %}
+{% block content %}
 <h1>Settings</h1>
-<p>Change password, configure firewall rules, or update server software.</p>
-<a href="/dashboard">Back to Dashboard</a>
+<form>
+  <div class="mb-3">
+    <label for="firewall" class="form-label">Firewall Rules</label>
+    <textarea class="form-control" id="firewall" rows="3">ALLOW 80, ALLOW 443, DENY 23</textarea>
+  </div>
+  <button type="submit" class="btn btn-outline-primary">Save Changes</button>
+</form>
+{% endblock %}

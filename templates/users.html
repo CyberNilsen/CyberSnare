@@ -1,6 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}User Management{% endblock %}
+{% block content %}
 <h1>User Management</h1>
-<ul>
-  <li>admin</li>
-  <li>cybernilsen</li>
-  <li>testuser1</li>
-</ul>
+<table class="table">
+  <thead><tr><th>Username</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>admin</td><td>Administrator</td></tr>
+    <tr><td>cybernilsen</td><td>Developer</td></tr>
+    <tr><td>testuser1</td><td>Guest</td></tr>
+  </tbody>
+</table>
+{% endblock %}
