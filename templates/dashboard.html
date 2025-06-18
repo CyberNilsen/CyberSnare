@@ -1,7 +1,16 @@
 {% extends "layout.html" %}
-{% block title %}Dashboard{% endblock %}
 {% block content %}
-<h1>Welcome to Admin Dashboard</h1>
-<p>System status: <span class="badge bg-success">OK</span></p>
-<p>Last login: 2025-06-15 14:26</p>
+  <div class="container mt-4">
+    <h1>Welcome {{ session.username }}</h1>
+    <p>System status: OK</p>
+    {% if is_admin %}
+      <p><strong>You are logged in as Admin.</strong></p>
+      <a href="/settings" class="btn btn-warning">Go to Settings</a>
+      <a href="/users" class="btn btn-info">User Management</a>
+    {% else %}
+      <p>You are a guest user. Limited access granted.</p>
+    {% endif %}
+    <br><br>
+    <a href="/logout" class="btn btn-secondary">Logout</a>
+  </div>
 {% endblock %}
