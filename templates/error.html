@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}Error {{ error_code }}{% endblock %}
+{% block content %}
+  <div class="text-center mt-5">
+    <h1 class="display-4 text-danger">Error {{ error_code }}</h1>
+    <p class="lead">{{ error_message }}</p>
+    <a href="/" class="btn btn-outline-secondary mt-3">Return to Home</a>
+  </div>
+{% endblock %}

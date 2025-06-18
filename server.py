@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, abort
 from logger import log_event
 from alerts import send_alert
 from ip_tracker import record_attempt, should_alert
@@ -26,7 +26,7 @@ def login():
     if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
         return ('/dashboard')
 
-    return "Access Denied", 403
+    abort(403)
 
 
 @app.route('/dashboard')
@@ -64,6 +64,15 @@ def logout():
     ua = request.headers.get('User-Agent')
     log_event(ip, ua, "Visited /logout", "N/A")
     return render_template('logout.html')
+
+@app.errorhandler(404)
+@app.errorhandler(403)
+@app.errorhandler(500)
+def handle_errors(e):
+    ip = request.remote_addr
+    ua = request.headers.get('User-Agent')
+    log_event(ip, ua, f"ERROR {e.code}", str(e))
+    return render_template("error.html", error_code=e.code, error_message=str(e)), e.code
 
 
 if __name__ == '__main__':
