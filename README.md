@@ -1,66 +1,68 @@
 # 🛡️ CyberSnare
 
-A lightweight web-based **Admin Panel** designed for **cybersecurity learning, research, and experimentation**. This project is ideal for students, ethical hackers, and developers interested in understanding core security principles, login flows, and internal system interfaces.
+A lightweight, web-based **Admin Panel honeypot** designed for **cybersecurity learning, experimentation, and research**.  
+Ideal for students, ethical hackers, and developers who want hands-on experience with authentication flows, access control, and simulated secure interfaces.
 
-
+---
 
 ## 🚀 Purpose
 
-**CyberSnare** simulates a secure internal interface often found in enterprise environments. It provides a safe environment to:
+**CyberSnare** simulates an internal administration portal commonly found in enterprise environments. It provides a **controlled, safe environment** to:
 
-- Practice user authentication and session control
-- Explore admin/guest permission handling
-- Experiment with web security best practices and misconfigurations
-- Understand protected dashboards, system status interfaces, and settings panels
+- Practice user login/session management  
+- Understand role-based access control (admin vs guest)  
+- Experiment with misconfigurations and UI/UX pitfalls  
+- Visualize system status and simulated settings  
+- Learn core concepts behind honeypots and defensive deception  
 
-
+---
 
 ## 🧠 Features
 
-- 🧑‍💼 Admin roles
-- 🔐 Session-based access control
-- ⚙️ Admin dashboard with:
-  - System status
-  - User management
-  - Editable security settings (firewall simulation)
-- 👁️ Custom error pages
-- 📬 Email alert system via **SendGrid**
-- 💡 Built with Flask and Bootstrap 5
+- 🔐 Login system with session-based access control  
+- 🧑‍💼 Admin dashboard with:
+  - ✅ System status overview  
+  - 👥 User management interface  
+  - 🔥 Editable firewall rules (simulated)  
+- 📬 Email alerts via **SendGrid**  
+- ⚠️ Custom error pages for 403 / 404 / 500  
+- ✨ Clean, responsive UI with Bootstrap 5  
+- 🧪 Predefined users for safe testing  
+- 🧲 Built as an educational honeypot concept  
 
-
+---
 
 ## 🧰 Prerequisites
 
-Before running this project, make sure you have the following installed:
+Make sure you have the following installed:
 
-- Python 3.8+
-- [pip](https://pip.pypa.io/en/stable/)
-- A SendGrid account (for email alerts)
+- Python **3.8+**  
+- [pip](https://pip.pypa.io/en/stable/)  
+- A verified **SendGrid account** (for sending email alerts)  
 
-
+---
 
 ## 🔧 Installation
 
-1. **Clone the repo**
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/cybernilsen-admin-portal.git
-cd cybernilsen-admin-portal
+git clone https://github.com/yourusername/cybersnare.git
+cd cybersnare
 ```
-
-2. **Create a virtual environment**
+2. Create and activate a virtual environment
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
-
-3. **Install dependencies**
+3. Install Python dependencies
 ```bash
 pip install -r requirements.txt
 ```
+4. Set up environment variables
+Create a .env file in the root directory:
+# .env
 
-4. **Set up your environment variables**
-```bash
+```
 ALERT_THRESHOLD=5
 
 SENDGRID_API_KEY=your_sendgrid_api_key
@@ -69,60 +71,55 @@ SMTP_PORT=587
 SMTP_FROM_EMAIL=verified_sender@example.com
 SMTP_FROM_NAME=your_name
 
-ALERT_EMAIL_TO=you@example.com
+ALERT_EMAIL_TO=your_email@example.com
 ```
-⚠️ Make sure SMTP_FROM_EMAIL is a verified sender in your SendGrid account (free or authenticated domain for example gmail account1 to  gmail account2 hence from and to).
+⚠️ Important: SMTP_FROM_EMAIL must be a verified sender in your SendGrid account (e.g. a verified Gmail address or authenticated domain).
 
+---
 
-
-**▶️ Running the App**
+## ▶️ Running the App
 ```bash
 flask run
 ```
-The app will be available at http://127.0.0.1:8080 and http://x.x.x.x:8080 your lan side IP.
+Visit:
+http://127.0.0.1:8080 (localhost)
+http://<your-lan-ip>:8080 (on your LAN)
 
+---
 
+## 🧪 Default Users
+| Username |	Password |	Role |
+| admin |	letmein123 |	Administrator |
 
-**🧪 Default Users (for testing)**
-Username |	Password |	Role
-admin |	letmein123 |	Administrator
-> You can customize or expand this in the config Python file.
+You can customize users in the config.py or similar config file.
 
+- 🧠 Learning Focus
+This project is designed to help you learn and experiment with:
 
+- 🔐 Secure session handling using Flask
 
-**Learning Focus** 
-This project includes:
+- 🔑 Admin/guest role-based permissions
 
-- Secure session handling using Flask
+- 🧱 Simulated firewall configuration interface
 
--Admin privilege
+- 📬 Email alerting with SendGrid
 
-- Fake configurable firewall simulation panel
+- 🧰 Clean Bootstrap 5 UI and Jinja2 templating
 
-- SendGrid email alerts
+- 🪤 Honeypot design and deception principles
 
-- Clean UI with Bootstrap 5
+---
 
-- Modular template structure (layout.html, dashboard.html, etc.)
+## ⚠️ Disclaimer
+This project is intended for educational and research purposes only.
+It is not secure for production use without significant hardening and proper authentication/security reviews.
 
-- General learning concept of what a honeypot is and what it does
+---
 
-
-
-**⚠️ Disclaimer**
-This project is for educational purposes only and to learn the concept of a honeypot. Do not deploy this in production environments without proper hardening, security reviews, and authentication measures. 
-
-
-
-**📄 License**
+## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+---
 
-**🙌 Credits**
+## 🙌 Credits
 Created with ❤️ by CyberNilsen
-
-
-
-
-
-
