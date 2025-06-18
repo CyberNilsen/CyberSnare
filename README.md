@@ -73,16 +73,22 @@ ALERT_EMAIL_TO=you@example.com
 ```
 ⚠️ Make sure SMTP_FROM_EMAIL is a verified sender in your SendGrid account (free or authenticated domain for example gmail account1 to  gmail account2 hence from and to).
 
+---
+
 **▶️ Running the App**
 ```bash
 flask run
 ```
 The app will be available at http://127.0.0.1:8080 and http://x.x.x.x:8080 your lan side IP.
 
+---
+
 **🧪 Default Users (for testing)**
 Username |	Password |	Role
-admin |	admin123 |	Administrator
+admin |	letmein123 |	Administrator
 > You can customize or expand this in the config Python file.
+
+---
 
 **Learning Focus** 
 This project includes:
@@ -101,11 +107,17 @@ This project includes:
 
 - General learning concept of what a honeypot is and what it does
 
+---
+
 **⚠️ Disclaimer**
 This project is for educational purposes only and to learn the concept of a honeypot. Do not deploy this in production environments without proper hardening, security reviews, and authentication measures. 
 
+---
+
 **📄 License**
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
 
 **🙌 Credits**
 Created with ❤️ by CyberNilsen
