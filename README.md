@@ -1,7 +1,6 @@
 # 🛡️ CyberSnare
 
-A lightweight, web-based **Admin Panel honeypot** designed for **cybersecurity learning, experimentation, and research**.  
-Ideal for students, ethical hackers, and developers who want hands-on experience with authentication flows, access control, and simulated secure interfaces.
+A lightweight, web-based **Admin Panel honeypot** designed for **cybersecurity learning, experimentation, and research**. Ideal for students, ethical hackers, and developers who want hands-on experience with authentication flows, access control, and simulated secure interfaces.
 
 ![CyberSnare showcase](https://github.com/user-attachments/assets/888c0dbf-e50c-43f7-9d7a-cd731d743bce)
 
