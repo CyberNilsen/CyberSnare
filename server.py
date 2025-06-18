@@ -94,5 +94,10 @@ def handle_errors(e):
     return render_template("error.html", error_code=e.code, error_message=str(e)), e.code
 
 
+# For local hosting
 if __name__ == '__main__':
     app.run(port=8080)
+
+# For lan hosting
+#if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
