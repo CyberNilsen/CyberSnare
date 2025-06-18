@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<div class="text-center mt-5">
+  {% if session.username %}
+    <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+      <h2 class="mb-3">Welcome back, {{ session.username }}!</h2>
+      {% if is_admin %}
+        <p class="text-success">You are an admin. Head to your dashboard below.</p>
+        <a href="/dashboard" class="btn btn-outline-primary mt-2">Go to Dashboard</a>
+      {% else %}
+        <p>You’re logged in as a guest user.</p>
+        <a href="/dashboard" class="btn btn-outline-secondary mt-2">Continue</a>
+      {% endif %}
+    </div>
+  {% else %}
+    <h1 class="mb-4">Welcome to the Admin Portal</h1>
+    <p class="lead">This secure portal provides access to system monitoring, user management, and configurations.</p>
+    <p>Please log in to continue.</p>
+    <a href="/login" class="btn btn-primary mt-3">🔐 Login</a>
+  {% endif %}
+</div>
+{% endblock %}

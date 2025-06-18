@@ -1,6 +1,16 @@
 {% extends "layout.html" %}
 {% block title %}Logged Out{% endblock %}
 {% block content %}
-<h1>You have been logged out</h1>
-<a href="/" class="btn btn-secondary">Return to login</a>
+<div class="container text-center mt-5">
+  <div class="alert alert-info d-inline-block shadow-sm">
+    <h4 class="alert-heading">👋 You've been logged out</h4>
+    <p class="mb-0">Your session has ended. Thank you for visiting.</p>
+  </div>
+   <div class="mt-4">
+    <a href="/login" class="btn btn-outline-primary">🛖 Back to Home</a>
+  </div>
+  <div class="mt-4">
+    <a href="/login" class="btn btn-outline-primary">🔑 Back to Login</a>
+  </div>
+</div>
 {% endblock %}

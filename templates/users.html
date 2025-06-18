@@ -1,13 +1,41 @@
 {% extends "layout.html" %}
 {% block title %}User Management{% endblock %}
 {% block content %}
-<h1>User Management</h1>
-<table class="table">
-  <thead><tr><th>Username</th><th>Role</th></tr></thead>
-  <tbody>
-    <tr><td>admin</td><td>Administrator</td></tr>
-    <tr><td>cybernilsen</td><td>Developer</td></tr>
-    <tr><td>testuser1</td><td>Guest</td></tr>
-  </tbody>
-</table>
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title mb-4">User Management</h2>
+      <table class="table table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Role</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>admin</td>
+            <td>Administrator</td>
+            <td><span class="badge bg-success">Active</span></td>
+            <td><button class="btn btn-sm btn-danger">Disable</button></td>
+          </tr>
+          <tr>
+            <td>cybernilsen</td>
+            <td>Developer</td>
+            <td><span class="badge bg-success">Active</span></td>
+            <td><button class="btn btn-sm btn-danger">Disable</button></td>
+          </tr>
+          <tr>
+            <td>testuser1</td>
+            <td>Guest</td>
+            <td><span class="badge bg-secondary">Pending</span></td>
+            <td><button class="btn btn-sm btn-success">Activate</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 {% endblock %}

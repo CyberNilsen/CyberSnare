@@ -2,3 +2,4 @@ Flask
 requests
 PyYAML
 python-dotenv
+sendgrid

@@ -1,12 +1,37 @@
 {% extends "layout.html" %}
 {% block title %}Settings{% endblock %}
 {% block content %}
-<h1>Settings</h1>
-<form>
-  <div class="mb-3">
-    <label for="firewall" class="form-label">Firewall Rules</label>
-    <textarea class="form-control" id="firewall" rows="3">ALLOW 80, ALLOW 443, DENY 23</textarea>
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title mb-4">System Settings</h2>
+      <form>
+        <div class="mb-3">
+          <label for="firewall" class="form-label">Firewall Rules</label>
+          <textarea class="form-control" id="firewall" rows="3">ALLOW 80, ALLOW 443, DENY 23</textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="alertEmail" class="form-label">Alert Notification Email</label>
+          <input type="email" class="form-control" id="alertEmail" placeholder="admin@example.com">
+        </div>
+
+        <div class="mb-3">
+          <label for="logRetention" class="form-label">Log Retention (days)</label>
+          <input type="number" class="form-control" id="logRetention" value="30">
+        </div>
+
+        <div class="mb-3">
+          <label for="maintenance" class="form-label">Maintenance Mode</label>
+          <select class="form-select" id="maintenance">
+            <option>Off</option>
+            <option>On</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">Save Changes</button>
+      </form>
+    </div>
   </div>
-  <button type="submit" class="btn btn-outline-primary">Save Changes</button>
-</form>
+</div>
 {% endblock %}

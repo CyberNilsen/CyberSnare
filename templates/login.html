@@ -1,18 +1,23 @@
 {% extends "layout.html" %}
 {% block title %}Login{% endblock %}
 {% block content %}
-<div class="login-container mx-auto" style="max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-  <h3 class="mb-4 text-center">Admin Panel Login</h3>
-  <form method="POST" action="/login">
-    <div class="mb-3">
-      <label for="username" class="form-label">Username</label>
-      <input name="username" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
-      <input name="password" type="password" class="form-control" required>
-    </div>
-    <button type="submit" class="btn btn-primary w-100">Login</button>
-  </form>
+<div class="d-flex justify-content-center mt-5 pt-4">
+  <div class="card shadow-lg p-4" style="min-width: 350px; max-width: 400px; width: 100%;">
+    <h3 class="text-center mb-4">🔐 Admin Panel Login</h3>
+    <form method="POST" action="/login">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input name="username" class="form-control" id="username" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input name="password" type="password" class="form-control" id="password" required>
+      </div>
+      {% if error %}
+        <div class="alert alert-danger py-2 small text-center">{{ error }}</div>
+      {% endif %}
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+  </div>
 </div>
 {% endblock %}

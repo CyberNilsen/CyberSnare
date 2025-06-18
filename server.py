@@ -10,11 +10,19 @@ app.secret_key = os.urandom(24)
 
 
 @app.route('/')
-def index():
-    return render_template('login.html')
+def home():
+    ip = request.remote_addr
+    ua = request.headers.get('User-Agent')
+    log_event(ip, ua, "Visited Home Page", "N/A")
+    if 'username' in session:
+        return render_template('home.html', is_admin=(session['username'] == 'admin'))
+    return render_template('home.html')
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'GET':
+        return render_template('login.html')
+
     username = request.form.get('username')
     password = request.form.get('password')
     ip = request.remote_addr
@@ -39,6 +47,7 @@ def login():
         return redirect('/dashboard')
 
     abort(403)
+
 
 @app.route('/dashboard')
 def dashboard():
@@ -83,7 +92,6 @@ def logout():
     log_event(ip, ua, "Logged out", "N/A")
     return render_template('logout.html')
 
-
 @app.errorhandler(404)
 @app.errorhandler(403)
 @app.errorhandler(500)
@@ -95,9 +103,9 @@ def handle_errors(e):
 
 
 # For local hosting
-if __name__ == '__main__':
+#if __name__ == '__main__':
     app.run(port=8080)
 
 # For lan hosting
-#if __name__ == '__main__':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
