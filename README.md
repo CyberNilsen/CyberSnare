@@ -89,6 +89,7 @@ http://<your-lan-ip>:8080 (on your LAN)
 
 ## 🧪 Default Users
 | Username |	Password |	Role |
+|---------|-------------|
 | admin |	letmein123 |	Administrator |
 
 You can customize users in the config.py or similar config file.
