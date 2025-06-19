@@ -1,8 +1,8 @@
 # 🛡️ CyberSnare
 
-A lightweight, web-based **Admin Panel honeypot** designed for **cybersecurity learning, experimentation, and research**.  
-Ideal for students, ethical hackers, and developers who want hands-on experience with authentication flows, access control, and simulated secure interfaces.
+A lightweight, web-based **Admin Panel honeypot** designed for **cybersecurity learning, experimentation, and research**. Ideal for students, ethical hackers, and developers who want hands-on experience with authentication flows, access control, and simulated secure interfaces.
 
+![CyberSnare showcase](https://github.com/user-attachments/assets/888c0dbf-e50c-43f7-9d7a-cd731d743bce)
 
 
 ## 🚀 Purpose
@@ -40,8 +40,6 @@ Make sure you have the following installed:
 - [pip](https://pip.pypa.io/en/stable/)  
 - A verified **SendGrid account** (for sending email alerts)  
 
----
-
 ## 🔧 Installation
 
 ### 1. Clone the repository
@@ -74,8 +72,6 @@ SMTP_FROM_NAME=your_name
 ALERT_EMAIL_TO=your_email@example.com
 ```
 ⚠️ Important: SMTP_FROM_EMAIL must be a verified sender in your SendGrid account (e.g. a verified Gmail address or authenticated domain).
-
----
 
 ## ▶️ Running the App
 ```bash
