@@ -45,7 +45,7 @@ Make sure you have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/cybersnare.git
+git clone https://github.com/CyberNilsen/cybersnare.git
 cd cybersnare
 ```
 2. Create and activate a virtual environment
